@@ -56,34 +56,14 @@
 
         body.dark section { background: #1c1c1c; }
 
-        /* Link-button style */
-        .link-button {
-            display: inline-block;
-            padding: 10px 14px;
-            background: #0066cc;
-            color: #fff !important;
-            border-radius: 6px;
-            text-decoration: none;
-            margin: 6px 0;
-            font-size: 16px;
-        }
-
-        .link-button:hover { opacity: 0.9; }
-
-        body.dark .link-button {
-            background: #4ea3ff;
-            color: #000 !important;
-        }
-
         /* Search Bar */
         #searchBar {
             width: 100%;
             padding: 10px;
             font-size: 16px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 6px;
-            box-sizing: border-box;
         }
 
         body.dark #searchBar {
@@ -95,18 +75,18 @@
         ul#linkList {
             list-style: none;
             padding: 0;
-            margin: 0;
         }
 
         ul#linkList li {
-            margin-bottom: 20px;
+            margin-bottom: 28px;
         }
 
-        iframe {
+        h3 {
+            margin-bottom: 6px;
+        }
+
+        audio {
             width: 100%;
-            height: 220px;
-            border-radius: 8px;
-            margin-top: 8px;
         }
     </style>
 </head>
@@ -120,50 +100,47 @@
 <section>
     <h2>Music</h2>
 
-    <!-- Search Bar -->
     <input type="text" id="searchBar" placeholder="Search music..." onkeyup="searchLinks()">
 
     <ul id="linkList">
 
-    <li>
-        <h3>Tyler the Creator</h3>
-        <audio controls>
-            <source src="music/tyler.mp3" type="audio/mpeg">
-        </audio>
-    </li>
+        <li>
+            <h3>Tyler the Creator</h3>
+            <audio controls>
+                <source src="music/tyler.mp3" type="audio/mpeg">
+            </audio>
+        </li>
 
-    <li>
-        <h3>Kendrick Lamar</h3>
-        <audio controls>
-            <source src="music/kendrick.mp3" type="audio/mpeg">
-        </audio>
-    </li>
+        <li>
+            <h3>Kendrick Lamar</h3>
+            <audio controls>
+                <source src="music/kendrick.mp3" type="audio/mpeg">
+            </audio>
+        </li>
 
-    <li>
-        <h3>Pharrell Williams</h3>
-        <audio controls>
-            <source src="music/pharrell.mp3" type="audio/mpeg">
-        </audio>
-    </li>
+        <li>
+            <h3>Pharrell Williams</h3>
+            <audio controls>
+                <source src="music/pharrell.mp3" type="audio/mpeg">
+            </audio>
+        </li>
 
-    <li>
-        <h3>The Clash</h3>
-        <audio controls>
-            <source src="music/theclash.mp3" type="audio/mpeg">
-        </audio>
-    </li>
+        <li>
+            <h3>The Clash</h3>
+            <audio controls>
+                <source src="music/theclash.mp3" type="audio/mpeg">
+            </audio>
+        </li>
 
-</ul>
+    </ul>
 
 </section>
 
 <script>
-    // Dark Mode Toggle
     function toggleDarkMode() {
         document.body.classList.toggle("dark");
     }
 
-    // Search Filter Function
     function searchLinks() {
         const input = document.getElementById("searchBar").value.toLowerCase();
         const items = document.querySelectorAll("#linkList li");
